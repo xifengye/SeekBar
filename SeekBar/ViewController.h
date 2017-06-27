@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HorizontalProgressSeekBar.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<HorizontalProgressSeekBarDelegate>
 
 
 @end

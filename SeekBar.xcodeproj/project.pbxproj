@@ -13,6 +13,13 @@
 		EB68C8F71F028ED8003DFCE5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB68C8F51F028ED8003DFCE5 /* Main.storyboard */; };
 		EB68C8F91F028ED8003DFCE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB68C8F81F028ED8003DFCE5 /* Assets.xcassets */; };
 		EB68C8FC1F028ED8003DFCE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB68C8FA1F028ED8003DFCE5 /* LaunchScreen.storyboard */; };
+		EB68C9051F028FC5003DFCE5 /* HorizontalProgressSeekBar.m in Sources */ = {isa = PBXBuildFile; fileRef = EB68C9041F028FC5003DFCE5 /* HorizontalProgressSeekBar.m */; };
+		EB68C90B1F0291D4003DFCE5 /* room_buyin_hint.png in Resources */ = {isa = PBXBuildFile; fileRef = EB68C9071F0291D4003DFCE5 /* room_buyin_hint.png */; };
+		EB68C90C1F0291D4003DFCE5 /* room_buyin_progress.png in Resources */ = {isa = PBXBuildFile; fileRef = EB68C9081F0291D4003DFCE5 /* room_buyin_progress.png */; };
+		EB68C90D1F0291D4003DFCE5 /* room_buyin_progress_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = EB68C9091F0291D4003DFCE5 /* room_buyin_progress_bg.png */; };
+		EB68C90E1F0291D4003DFCE5 /* room_buyin_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = EB68C90A1F0291D4003DFCE5 /* room_buyin_thumb.png */; };
+		EB68C9111F02B116003DFCE5 /* popdlg_btn_radio_off_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = EB68C90F1F02B116003DFCE5 /* popdlg_btn_radio_off_normal.png */; };
+		EB68C9121F02B116003DFCE5 /* popdlg_btn_radio_off_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = EB68C9101F02B116003DFCE5 /* popdlg_btn_radio_off_pressed.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +33,14 @@
 		EB68C8F81F028ED8003DFCE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB68C8FB1F028ED8003DFCE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB68C8FD1F028ED8003DFCE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB68C9031F028FC5003DFCE5 /* HorizontalProgressSeekBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizontalProgressSeekBar.h; sourceTree = "<group>"; };
+		EB68C9041F028FC5003DFCE5 /* HorizontalProgressSeekBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizontalProgressSeekBar.m; sourceTree = "<group>"; };
+		EB68C9071F0291D4003DFCE5 /* room_buyin_hint.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = room_buyin_hint.png; sourceTree = "<group>"; };
+		EB68C9081F0291D4003DFCE5 /* room_buyin_progress.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = room_buyin_progress.png; sourceTree = "<group>"; };
+		EB68C9091F0291D4003DFCE5 /* room_buyin_progress_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = room_buyin_progress_bg.png; sourceTree = "<group>"; };
+		EB68C90A1F0291D4003DFCE5 /* room_buyin_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = room_buyin_thumb.png; sourceTree = "<group>"; };
+		EB68C90F1F02B116003DFCE5 /* popdlg_btn_radio_off_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = popdlg_btn_radio_off_normal.png; sourceTree = "<group>"; };
+		EB68C9101F02B116003DFCE5 /* popdlg_btn_radio_off_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = popdlg_btn_radio_off_pressed.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +57,7 @@
 		EB68C8E01F028ED7003DFCE5 = {
 			isa = PBXGroup;
 			children = (
+				EB68C9061F0291D4003DFCE5 /* image */,
 				EB68C8EB1F028ED8003DFCE5 /* SeekBar */,
 				EB68C8EA1F028ED8003DFCE5 /* Products */,
 			);
@@ -67,6 +83,8 @@
 				EB68C8FA1F028ED8003DFCE5 /* LaunchScreen.storyboard */,
 				EB68C8FD1F028ED8003DFCE5 /* Info.plist */,
 				EB68C8EC1F028ED8003DFCE5 /* Supporting Files */,
+				EB68C9031F028FC5003DFCE5 /* HorizontalProgressSeekBar.h */,
+				EB68C9041F028FC5003DFCE5 /* HorizontalProgressSeekBar.m */,
 			);
 			path = SeekBar;
 			sourceTree = "<group>";
@@ -77,6 +95,20 @@
 				EB68C8ED1F028ED8003DFCE5 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EB68C9061F0291D4003DFCE5 /* image */ = {
+			isa = PBXGroup;
+			children = (
+				EB68C90F1F02B116003DFCE5 /* popdlg_btn_radio_off_normal.png */,
+				EB68C9101F02B116003DFCE5 /* popdlg_btn_radio_off_pressed.png */,
+				EB68C9071F0291D4003DFCE5 /* room_buyin_hint.png */,
+				EB68C9081F0291D4003DFCE5 /* room_buyin_progress.png */,
+				EB68C9091F0291D4003DFCE5 /* room_buyin_progress_bg.png */,
+				EB68C90A1F0291D4003DFCE5 /* room_buyin_thumb.png */,
+			);
+			name = image;
+			path = SeekBar/image;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +169,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB68C90E1F0291D4003DFCE5 /* room_buyin_thumb.png in Resources */,
 				EB68C8FC1F028ED8003DFCE5 /* LaunchScreen.storyboard in Resources */,
 				EB68C8F91F028ED8003DFCE5 /* Assets.xcassets in Resources */,
+				EB68C9121F02B116003DFCE5 /* popdlg_btn_radio_off_pressed.png in Resources */,
+				EB68C9111F02B116003DFCE5 /* popdlg_btn_radio_off_normal.png in Resources */,
+				EB68C90D1F0291D4003DFCE5 /* room_buyin_progress_bg.png in Resources */,
 				EB68C8F71F028ED8003DFCE5 /* Main.storyboard in Resources */,
+				EB68C90C1F0291D4003DFCE5 /* room_buyin_progress.png in Resources */,
+				EB68C90B1F0291D4003DFCE5 /* room_buyin_hint.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +190,7 @@
 			files = (
 				EB68C8F41F028ED8003DFCE5 /* ViewController.m in Sources */,
 				EB68C8F11F028ED8003DFCE5 /* AppDelegate.m in Sources */,
+				EB68C9051F028FC5003DFCE5 /* HorizontalProgressSeekBar.m in Sources */,
 				EB68C8EE1F028ED8003DFCE5 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

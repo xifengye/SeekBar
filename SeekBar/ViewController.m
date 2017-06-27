@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "HorizontalProgressSeekBar.h"
 
 @interface ViewController ()
 
@@ -16,13 +17,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    HorizontalProgressSeekBar* bar = [[HorizontalProgressSeekBar alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 0)];
+    [self.view addSubview:bar];
+    bar.delegate = self;
 }
 
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)onProgressChange:(HorizontalProgressSeekBar*) seekBar progress:(int)progress
+{
+    [seekBar setTextHint:[NSString stringWithFormat:@"%d",progress]];
 }
 
 
