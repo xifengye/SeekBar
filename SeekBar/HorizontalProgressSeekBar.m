@@ -26,6 +26,11 @@
     NSString* _text;
     UIFont* font;
     NSDictionary*attribute;
+    int piece;
+    
+    int _minProgress;
+    int _maxProgress;
+    int _step;
 }
 
 // Only override drawRect: if you perform custom drawing.
@@ -34,8 +39,11 @@
 {
     [self drawProgressBar];
     [self drawThumb];
-    [self drawHint];
-    [self drawText];
+    if(_text && [_text length]>0)
+    {
+        [self drawHint];
+        [self drawText];
+    }
 }
 
 - (instancetype)initWithFrame:(CGRect)frame
@@ -53,6 +61,7 @@
         thumbImg = [UIImage imageNamed:@"room_buyin_thumb"];
         hintImg = [UIImage imageNamed:@"room_buyin_hint"];
         _pgHeight = (int)(0.62f*thumbImg.size.height);
+        piece = 1;
         
         offset = (hintImg.size.width-thumbImg.size.width) / 2;
         if(offset < 0 ) {
@@ -66,7 +75,6 @@
         NSMutableParagraphStyle* paragraphStyle = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
         paragraphStyle.lineBreakMode = NSLineBreakByCharWrapping;
         attribute = @{NSFontAttributeName:font,NSParagraphStyleAttributeName:paragraphStyle};
-
     }
     return self;
 }
@@ -86,6 +94,14 @@
     if(_delegate && [_delegate respondsToSelector:@selector(onProgressChange:progress:)])
     {
         [_delegate onProgressChange:self progress:_progress];
+    }
+    if(_delegate && [_delegate respondsToSelector:@selector(onPieceProgressChange:progress:)])
+    {
+        if(progress==MAX_PROGRESS)
+        {
+            progress = (_maxProgress-_minProgress)*piece;
+        }
+        [_delegate onPieceProgressChange:self progress:progress/piece+_minProgress];
     }
     NSLog(@"progress=%d",_progress);
 }
@@ -186,6 +202,42 @@
     textSize = [text sizeWithAttributes:attribute];
     [self setNeedsDisplay];
 }
+
+-(void)setStepProgress:(int)minProgress maxProgress:(int)maxProgress step:(int)step
+{
+    _minProgress = minProgress;
+    _maxProgress = maxProgress;
+    _step = step;
+    
+    int numberOfPiece = (maxProgress-minProgress);
+    int p = numberOfPiece/MAX_PROGRESS;
+    if(p==0)
+    {
+        piece = (int)lround(1.0f/numberOfPiece*100);
+    }else{
+        piece = 1;
+    }
+    [self setProgress:0];
+}
+
+-(void)addPiece
+{
+    [self setProgress:_progress+piece];
+    [self setNeedsLayout];
+}
+
+-(void)minusPiece
+{
+    int progress = _progress;
+    if(progress==MAX_PROGRESS)
+    {
+        progress = (_maxProgress-_minProgress)*piece;
+    }
+    [self setProgress:progress-piece];
+    [self setNeedsLayout];
+}
+
+
 
 
 @end

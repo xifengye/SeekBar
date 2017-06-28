@@ -14,6 +14,7 @@
 
 @optional
 -(void)onProgressChange:(HorizontalProgressSeekBar*) seekBar progress:(int)progress;
+-(void)onPieceProgressChange:(HorizontalProgressSeekBar*) seekBar progress:(int)progress;
 
 @end
 
@@ -21,5 +22,8 @@
 
 -(void)setTextHint:(NSString*)text;
 -(int)getProgress;
+-(void)setStepProgress:(int)minProgress maxProgress:(int)maxProgress step:(int)step;
+-(void)addPiece;
+-(void)minusPiece;
 @property (nonatomic,weak) id<HorizontalProgressSeekBarDelegate> delegate;
 @end
